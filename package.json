@@ -1,16 +1,30 @@
 {
-  "name": "email-input-component",
+  "name": "vue-email-input",
   "version": "0.1.0",
-  "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
+    "demo": "vue-cli-service demo",
+    "docs": "npm run docs:serve",
+    "docs:build": "vue-cli-service docs --mode build",
+    "docs:serve": "vue-cli-service docs --mode serve",
+    "prepublish": "vue-cli-service lint && vue-cli-service docs --mode build && vue-cli-service build",
+    "start": "vue-cli-service serve",
     "test:unit": "vue-cli-service test:unit"
   },
+  "main": "dist/vue-email-input.common.js",
+  "module": "dist/vue-email-input.esm.js",
+  "unpkg": "dist/vue-email-input.umd.min.js",
+  "files": [
+    "dist/vue-email-input.common.js",
+    "dist/vue-email-input.umd.min.js",
+    "dist/vue-email-input.umd.js",
+    "dist/vue-email-input.esm.js",
+    "src"
+  ],
   "dependencies": {
-    "core-js": "^3.6.4",
-    "vue": "^2.6.11"
+    "core-js": "^3.6.4"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.2.0",
@@ -26,6 +40,10 @@
     "node-sass": "^4.12.0",
     "prettier": "^1.19.1",
     "sass-loader": "^8.0.2",
-    "vue-template-compiler": "^2.6.11"
-  }
+    "vue-cli-plugin-p11n": "^0.4.0",
+    "vue-template-compiler": "^2.6.11",
+    "vue": "^2.6.11"
+  },
+  "jsdelivr": "dist/vue-email-input.umd.min.js",
+  "sideeffects": false
 }

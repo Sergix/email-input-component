@@ -1,8 +1,13 @@
-import Vue from "vue";
-import App from "./App.vue";
+import Vue from 'vue'
+import App from './App.vue'
 
-Vue.config.productionTip = false;
+import VueEmailInput from '@/plugin'
+import './plugin'
+
+Vue.config.productionTip = false
+
+Vue.use(VueEmailInput)
 
 new Vue({
-  render: h => h(App)
-}).$mount("#app");
+  render: (h) => h(App)
+}).$mount('#app')
